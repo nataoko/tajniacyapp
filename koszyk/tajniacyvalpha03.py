@@ -9,7 +9,7 @@
 #menu: instrukcja, o autorze, nowa gra - zrobione
 #po zakończeniu rundy dodć powrót do menu - zrobione
 # dodac zmienne globalne, zebynie otwierac plikow milion razy - ok
-# czcionka - moze byc
+# czcionka
 
 
 import pygame
@@ -17,6 +17,16 @@ from pygame.locals import *
 import os.path
 import random
 import sys
+
+
+#sorted(pygame.font.get_fonts())
+#czcionka = 'arialblack'#'twcenpogrubiony'#'aharoni'
+#czcionka2 = 'arialblack' #monospace
+#fontsize = 30 #35
+#fontsize2 = 18 #18
+#fontsize30 = 20 #25
+#fontpogrubiony = 0 # 1
+#fontpogrubionyboard = 0 #1
 
 czcionka = 'calibri'#'twcenpogrubiony'#'aharoni'
 czcionka2 = 'arialblack' #monospace
@@ -247,27 +257,19 @@ def game_loop():
             kartaSprites.draw(screen) 
          
         if INTRO == 1: #po zakonczenu gry
-                
+
             #dodaje i uaktualnia sprity
             kartaSprites.add(nowa_gra)
             kartaSprites.add(menu)
             nowa_gra.update() #uaktualnia tylko nowa_gra
             menu.update()
+            kartaSprites.draw(screen) #dodaje karte nowa_gra, menu
 
-            #Wyczyść sprite'y
-            scoreboardredSprite.clear(screen, background_image)
-            scoreboardblueSprite.clear(screen,background_image)
-            kartaSprites.clear(screen,background_image)
-            
-            #rysuj sprite'y na ekranie
-            scoreboardredSprite.draw(screen)
-            scoreboardblueSprite.draw(screen)
-            kartaSprites.draw(screen)
             
         if INTRO == 0: #gra
             kartaSprites.update()#update kart
             
-            #Wyczyść sprite'y
+            #Wyczyść ekran
             scoreboardredSprite.clear(screen, background_image)
             scoreboardblueSprite.clear(screen,background_image)
             kartaSprites.clear(screen,background_image)            
@@ -321,13 +323,11 @@ def game_loop():
             for i in range (25):
                 kolor = Kolory[i]
                 slowo = Slowa[i]
-                if kolor == 0:
-                    karta_czarna = Karta(startx+(i%5)*karta.szer, \
-                                         starty+(int(i/5))*karta.wys, slowo, kolor)
+                if kolor ==0:
+                    karta_czarna = Karta(startx+(i%5)*karta.szer, starty+(int(i/5))*karta.wys, slowo, kolor)
                     kartaSprites.add(karta_czarna)
                 else:
-                    kartaSprites.add(Karta(startx+(i%5)*karta.szer, \
-                                           starty+(int(i/5))*karta.wys, slowo, kolor))
+                    kartaSprites.add(Karta(startx+(i%5)*karta.szer, starty+(int(i/5))*karta.wys, slowo, kolor))
 
 
             scoreboardred.pkty = 8 + (kol_dom == 2) #/pkty
