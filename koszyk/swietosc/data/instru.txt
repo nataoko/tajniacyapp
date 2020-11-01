@@ -1,0 +1,50 @@
+INSTRUKCJA:
+
+Podzielcie siê na dwie dru¿yny - niebiesk¹ i czerwon¹.
+
+Celem gry jest odkrycie wszystkich 
+
+kart koloru swojej dru¿yny.
+
+Ka¿da dru¿yna wybiera szefa.
+
+Szefowie dostaj¹ plik "dla_szefów.jpg" 
+
+i widz¹ go tylko oni.
+
+Maj¹ za zadanie podaæ jedno s³owo i liczbê kart, 
+
+które powi¹zali za pomoc¹ tego s³owa.
+
+(Mo¿na podaæ równie¿ liczbê 0).
+
+Gracze klikaj¹ na karty, które po³¹czyli 
+
+z powiedzianym przez szefa s³owem.
+
+Je¿eli odkryj¹ liczbê kart podan¹ przez szefa,
+
+mog¹ dodatkowo odkryæ jedn¹ kartê.
+
+Za ka¿d¹ odkryt¹ kartê koloru danej dru¿yny,
+
+dru¿yna dostaje 1 punkt 
+
+(niezaleznie, która dru¿yna odkry³a kartê).
+
+Je¿eli podczas odkrywania kart, dru¿yna odkryjê kartê
+
+nie swojego koloru, dru¿yna traci kolejkê.
+
+Je¿eli zostanie odkryta czarna karta, gra siê koñczy.
+
+Je¿eli zostan¹ odkryte wszystkie karty danej dru¿yny, 
+
+gra siê koñczy.
+
+Wygrywa dru¿yna, która zdoby³a wiêcej punktów.
+
+
+GRA TYLKO DO U¯YTKU WEWNÊTRZNEGO, 
+
+NIE WYKORZYSTYWAÆ W CELACH KOMERCYJNYCH!!!
