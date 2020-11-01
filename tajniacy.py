@@ -169,13 +169,13 @@ def rysunek(Kolory):
             kwadr_wys = Lista[i][1]
             kwadr_kolor = Lista[i][2]
             if kwadr_kolor == 0:
-                image=pygame.image.load(os.path.join("data","KartaCzarna_mala.png"))
+                image = kartacz
             if kwadr_kolor == 1:
-                image=pygame.image.load(os.path.join("data","KartaBiala_mala.png"))
+                image = kartab
             if kwadr_kolor == 2:
-                image=pygame.image.load(os.path.join("data","KartaCzerwona_mala.png"))
+                image = kartacze
             if kwadr_kolor == 3:
-                image=pygame.image.load(os.path.join("data","KartaNiebieska_mala.png"))
+                image = kartan
             background_image1.blit(image,(kwadr_szer,kwadr_wys))
     saveImage(background_image1,"dla_szefow.jpg")
 
@@ -200,14 +200,7 @@ def loadImage(name, useColorKey=False):
     if useColorKey is True:
         colorkey = image.get_at((2,2)) #odczytaj kolor w punkcie (0,0)
         image.set_colorkey(colorkey,RLEACCEL) # ustaw kolor jako przezroczysty
-        #flaga RLEACCEL oznacza lepszą wydajność na ekranach bez akceleracji
-        #wymaga from pygame.locals import *
     return image
-
-#def ramka(file):
-    #start=loadImage("RAMKA.png")
-    
-#    return odczyt(file)
 
 def odczyt(file):
     '''wczytuje tekst z pliku i zwraca linie w liscie'''
@@ -244,11 +237,9 @@ def game_loop():
 
     kursorSprite = pygame.sprite.RenderClear() # init kursora
     kursorSprite.add(kursor)
-    #background_image=loadImage("bkg.jpg")
     
     while running:
         clock.tick(40) #nie więcej niż 40 klatek na sekundę
-        #screen.blit(background_image,(0,0))
         kursorSprite.clear(screen, kursor.background_image)
 
             
@@ -310,7 +301,6 @@ def game_loop():
 
             INTRO = 2
             
-            #kursor.background_image = background_image_t
             screen.blit(background_image_t,(0,0)) 
             
             menu.counter = 0
@@ -318,7 +308,6 @@ def game_loop():
         if nowa_gra.counter == 2 or menu_nowa_gra.counter == 2:
             menu_instrukcja.open = 0
             menu_o_autorze.open = 0
-            #kursor.background_image = background_image
             screen.blit(background_image,(0,0))
 
             #wyczysc sprite'y kart
@@ -375,8 +364,6 @@ class Kursor(pygame.sprite.Sprite):
         self.rect = pygame.mouse.get_pos()
         self.background_image = background_image_t
     def update(self):
-        #self.pos = pygame.mouse.get_pos()
-        #screen.blit(self.image,self.pos)
         self.rect = pygame.mouse.get_pos()
 
 class Karta(pygame.sprite.Sprite):
@@ -428,21 +415,27 @@ class Karta(pygame.sprite.Sprite):
                             ramka(instrutxt)
                             self.image = loadImage("Karta.png",True)
                             self.image.blit(self.imageT,(int(self.szer/10),int(self.wys/3)))
-                            screen.blit(background_image_jasny,(0,0))
-                            #kursor.background_image = background_image
                             menu_o_autorze.open = 0
                             self.counter = 0
-                            self.open = 1
+                            if self.open == 1:
+                                self.open = 0
+                                screen.blit(background_image_t,(0,0))
+                            else:
+                                self.open = 1
+                                screen.blit(background_image_jasny,(0,0))
+                                
                         elif self.kolor == 5: # o autorze
                             ramka(autortxt)
                             self.image = loadImage("Karta.png",True)
                             self.image.blit(self.imageT,(int(self.szer/10),int(self.wys/3)))
-                            screen.blit(background_image_jasny1,(0,0))
-                            #kursor.background_image = background_image
                             menu_instrukcja.open = 0
                             self.counter = 0
-                            self.open = 1
-
+                            if self.open == 1:
+                                self.open = 0
+                                screen.blit(background_image_t,(0,0))
+                            else:
+                                self.open = 1
+                                screen.blit(background_image_jasny1,(0,0))
            else:
             self.counter = 0
             self.image = loadImage("Karta.png",True)
@@ -491,8 +484,6 @@ class ScoreBoardBlue(pygame.sprite.Sprite):
         self.image = self.font.render(self.text,1,(0,0,0))
 
 if __name__ == '__main__':
-    # właściwy program
-    # Inicjalizacja PyGame
     pygame.init()
 
     SCREEN_WIDTH = 1019 
@@ -508,7 +499,12 @@ if __name__ == '__main__':
     kartaczarna = loadImage("KartaCzarna.png",True)
     kartabiala = loadImage("KartaBiala.png",True)
     kartaczerwona = loadImage("KartaCzerwona.png",True)
-    kartaniebieska = loadImage("KartaNiebieska.png",True) 
+    kartaniebieska = loadImage("KartaNiebieska.png",True)
+
+    kartacz = pygame.image.load(os.path.join("data","KartaCzarna_mala.png"))
+    kartab = pygame.image.load(os.path.join("data","KartaBiala_mala.png"))
+    kartacze = pygame.image.load(os.path.join("data","KartaCzerwona_mala.png"))
+    kartan = pygame.image.load(os.path.join("data","KartaNiebieska_mala.png"))
 
     autortxt =  odczyt('autor.txt')
     instrutxt = odczyt('instru.txt')
