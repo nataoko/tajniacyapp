@@ -207,17 +207,20 @@ def odczyt(file):
     myfont = pygame.font.SysFont(czcionka2, fontsize2 ,bold = fontpogrubionyopis)
     i=0
     Labels = []
-    with open('data'+os.sep+file,'r', encoding="utf8") as file1:
+    with open('data'+os.sep+file,'r') as file1:
         #Przepisuje tekst pliku linia po linii.
         for line in file1:
           i+=10
           # render text
           label = myfont.render(line[0:-1], 1, (0,0,0))
+          #screen.blit(label, (SCREEN_WIDTH/3+10+255,200+3+i))
+          #screen.blit(label, (int(SCREEN_WIDTH/5),160+i))
           Labels.append(label)
     return Labels
 
 def ramka(Labels):
     "wywala na ekranie Labels (tabela z liniami)"
+    #screen.blit(background_image_jasny,(0,0))
     i = 0
     for label in Labels:
         i += 10

@@ -1,50 +1,50 @@
 INSTRUKCJA:
 
-Podzielcie siê na dwie dru¿yny - niebiesk¹ i czerwon¹.
+Podzielcie siÄ™ na dwie druÅ¼yny - niebieskÄ… i czerwonÄ….
 
 Celem gry jest odkrycie wszystkich 
 
-kart koloru swojej dru¿yny.
+kart koloru swojej druÅ¼yny.
 
-Ka¿da dru¿yna wybiera szefa.
+KaÅ¼da druÅ¼yna wybiera szefa.
 
-Szefowie dostaj¹ plik "dla_szefów.jpg" 
+Szefowie dostajÄ… plik "dla_szefÃ³w.jpg" 
 
-i widz¹ go tylko oni.
+i widzÄ… go tylko oni.
 
-Maj¹ za zadanie podaæ jedno s³owo i liczbê kart, 
+MajÄ… za zadanie podaÄ‡ jedno sÅ‚owo i liczbÄ™ kart, 
 
-które powi¹zali za pomoc¹ tego s³owa
+ktÃ³re powiÄ…zali za pomocÄ… tego sÅ‚owa
 
-(mo¿na podaæ równie¿ liczbê 0).
+(moÅ¼na podaÄ‡ rÃ³wnieÅ¼ liczbÄ™ 0).
 
-Gracze klikaj¹ na karty, które po³¹czyli 
+Gracze klikajÄ… na karty, ktÃ³re poÅ‚Ä…czyli 
 
-z powiedzianym przez szefa s³owem.
+z powiedzianym przez szefa sÅ‚owem.
 
-Je¿eli odkryj¹ liczbê kart podan¹ przez szefa,
+JeÅ¼eli odkryjÄ… liczbÄ™ kart podanÄ… przez szefa,
 
-mog¹ dodatkowo odkryæ jedn¹ kartê.
+mogÄ… dodatkowo odkryÄ‡ jednÄ… kartÄ™.
 
-Za ka¿d¹ odkryt¹ kartê koloru danej dru¿yny,
+Za kaÅ¼dÄ… odkrytÄ… kartÄ™ koloru danej druÅ¼yny,
 
-dru¿yna dostaje 1 punkt 
+druÅ¼yna dostaje 1 punkt 
 
-(niezaleznie, która dru¿yna odkry³a kartê).
+(niezaleznie, ktÃ³ra druÅ¼yna odkryÅ‚a kartÄ™).
 
-Je¿eli podczas odkrywania kart, dru¿yna odkryjê kartê
+JeÅ¼eli podczas odkrywania kart, druÅ¼yna odkryjÄ™ kartÄ™
 
-nie swojego koloru, dru¿yna traci kolejkê.
+nie swojego koloru, druÅ¼yna traci kolejkÄ™.
 
-Je¿eli zostanie odkryta czarna karta, gra siê koñczy.
+JeÅ¼eli zostanie odkryta czarna karta, gra siÄ™ koÅ„czy.
 
-Je¿eli zostan¹ odkryte wszystkie karty danej dru¿yny, 
+JeÅ¼eli zostanÄ… odkryte wszystkie karty danej druÅ¼yny, 
 
-gra siê koñczy.
+gra siÄ™ koÅ„czy.
 
-Wygrywa dru¿yna, która zdoby³a wiêcej punktów.
+Wygrywa druÅ¼yna, ktÃ³ra zdobyÅ‚a wiÄ™cej punktÃ³w.
 
 
-GRA TYLKO DO U¯YTKU WEWNÊTRZNEGO, 
+GRA TYLKO DO UÅ»YTKU WEWNÄ˜TRZNEGO, 
 
-NIE WYKORZYSTYWAÆ W CELACH KOMERCYJNYCH!!!
+NIE WYKORZYSTYWAÄ† W CELACH KOMERCYJNYCH!!!
