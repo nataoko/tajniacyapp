@@ -310,7 +310,7 @@ def game_loop():
 
             INTRO = 2
             
-            kursor.background_image = background_image_t
+            #kursor.background_image = background_image_t
             screen.blit(background_image_t,(0,0)) 
             
             menu.counter = 0
@@ -318,7 +318,7 @@ def game_loop():
         if nowa_gra.counter == 2 or menu_nowa_gra.counter == 2:
             menu_instrukcja.open = 0
             menu_o_autorze.open = 0
-            kursor.background_image = background_image
+            #kursor.background_image = background_image
             screen.blit(background_image,(0,0))
 
             #wyczysc sprite'y kart
@@ -375,7 +375,7 @@ class Kursor(pygame.sprite.Sprite):
         self.rect = pygame.mouse.get_pos()
         self.background_image = background_image_t
     def update(self):
-        self.pos = pygame.mouse.get_pos()
+        #self.pos = pygame.mouse.get_pos()
         #screen.blit(self.image,self.pos)
         self.rect = pygame.mouse.get_pos()
 
@@ -429,7 +429,7 @@ class Karta(pygame.sprite.Sprite):
                             self.image = loadImage("Karta.png",True)
                             self.image.blit(self.imageT,(int(self.szer/10),int(self.wys/3)))
                             screen.blit(background_image_jasny,(0,0))
-                            kursor.background_image = background_image
+                            #kursor.background_image = background_image
                             menu_o_autorze.open = 0
                             self.counter = 0
                             self.open = 1
@@ -438,7 +438,7 @@ class Karta(pygame.sprite.Sprite):
                             self.image = loadImage("Karta.png",True)
                             self.image.blit(self.imageT,(int(self.szer/10),int(self.wys/3)))
                             screen.blit(background_image_jasny1,(0,0))
-                            kursor.background_image = background_image
+                            #kursor.background_image = background_image
                             menu_instrukcja.open = 0
                             self.counter = 0
                             self.open = 1
